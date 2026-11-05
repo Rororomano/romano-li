@@ -190,6 +190,12 @@ main { min-width: 0; display: flex; flex-direction: column; gap: 64px; }
 .paper-title a:hover { color: var(--accent); }
 .authors { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
 .authors .me { color: var(--ink); font-weight: 500; }
+.keywords {
+  margin: 2px 0 0;
+  font-size: 13.5px; line-height: 1.5;
+  color: var(--ink-soft);
+}
+.keywords span[aria-hidden] { color: var(--rule); }
 .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 6px; }
 .status {
   font: 500 11.5px/1 var(--font-mono);
