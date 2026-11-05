@@ -10,6 +10,7 @@
   --accent-wash: #e8edf4;
   --hover: #eef1ef;
   --cluster-b: #b47d2c;   /* ochre, second series in figures */
+  --cluster-c: #4c8063;   /* sage, third series */
 
   --font-display: "Newsreader", "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -23,13 +24,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #14181c; --surface: #1b2025; --ink: #e6e9ec; --ink-soft: #9aa4ae;
-    --rule: #2c333a; --accent: #8fb3e6; --accent-wash: #1f2b3a; --hover: #1b2126; --cluster-b: #e0b06a;
+    --rule: #2c333a; --accent: #8fb3e6; --accent-wash: #1f2b3a; --hover: #1b2126; --cluster-b: #e0b06a; --cluster-c: #8cc4a2;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #14181c; --surface: #1b2025; --ink: #e6e9ec; --ink-soft: #9aa4ae;
-  --rule: #2c333a; --accent: #8fb3e6; --accent-wash: #1f2b3a; --hover: #1b2126; --cluster-b: #e0b06a;
+  --rule: #2c333a; --accent: #8fb3e6; --accent-wash: #1f2b3a; --hover: #1b2126; --cluster-b: #e0b06a; --cluster-c: #8cc4a2;
   color-scheme: dark;
 }
 
@@ -165,6 +166,7 @@ main { min-width: 0; display: flex; flex-direction: column; gap: 64px; }
 .fig .sb { stop-color: var(--cluster-b); }
 .fig .amb .dot { fill: url(#cert-split); }
 .fig .amb .ring { fill: none; stroke: var(--ink); stroke-opacity: .55; stroke-width: 2.5; stroke-dasharray: 5 6; }
+.paper.no-thumb { grid-template-columns: minmax(0, 1fr); }
 .thumb.fig { cursor: zoom-in; transition: border-color .2s ease; }
 .thumb.fig:hover { border-color: var(--ink-soft); }
 .lightbox {
