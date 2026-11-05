@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Romano Li</title>
+<meta name="description" content="Romano Li, PhD student at Brown University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <aside class="profile">
+    <!-- 换成照片：<img class="avatar" src="images/avatar.jpg" alt="Romano Li"> -->
+    <div class="avatar" aria-hidden="true">RL</div>
+    <div>
+      <h1 class="name">Romano Li</h1>
+      <p class="role">PhD Student<br>Brown University</p>
+    </div>
+    <p class="blurb">[One sentence describing your research.]</p>
+    <ul class="contact">
+      <li class="email">romano.li@brown.edu</li>
+      <li class="links">
+        <a href="#">Google Scholar</a>
+        <a href="#">GitHub</a>
+      </li>
+    </ul>
+  </aside>
+
+  <main>
+    <section class="section" aria-labelledby="wp">
+      <h2 class="section-title" id="wp">Working Papers <span class="count">4</span></h2>
+
+      <article class="paper">
+        <!-- 换成图片：<figure class="thumb"><img src="images/accuracy-value.png" alt=""></figure> -->
+        <figure class="thumb placeholder" aria-hidden="true"><span>Figure</span></figure>
+        <div class="paper-body">
+          <h3 class="paper-title">Accuracy Is Not Value: Choosing Weak Supervisors by What the Student Inherits</h3>
+          <p class="authors">with Xunfan Cai</p>
+          <div class="meta">
+            <span class="status">2026</span>
+            <button class="abs-toggle" type="button" aria-expanded="false">Abstract <span class="chev">▾</span></button>
+          </div>
+          <div class="abstract"><div>
+            <p>Weak supervisors are usually judged by their own errors, but what matters is what a student learns from them. For squared loss and any linear learner shared by all supervisors, we show that a supervisor’s value is determined by its errors <em>after</em> they pass through the student’s learning operator. Consequently, the inner products of the supervisors’ raw errors can be compatible with every feasible value of the student’s risk, and weighting supervisors by them can be arbitrarily worse than the best weighting in relative excess risk. This student-relative value is not identifiable from unlabeled data, but what is missing is small: one finite-dimensional projection of the target decides whether training on a weak aggregate helps, another decides how to weight the supervisors. Known teacher training rules, or a label-model condition stated in student-relative form, shrink it further. Clean labels close the remaining gap at a cost set by the geometry of the unresolved directions rather than by the dimension of the student’s representation, with matching worst-case lower bounds. In Gaussian designs we also quantify when exact teacher structure beats ordinary stacking and when weak supervisors are worth their anchors compared with every procedure that uses the clean labels alone. The guarantees extend to fitted ridge students and finite unlabeled data.</p>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="paper">
+        <figure class="thumb placeholder" aria-hidden="true"><span>Figure</span></figure>
+        <div class="paper-body">
+          <h3 class="paper-title">The Condition-Number Principle for Prototype Clustering</h3>
+          <p class="authors">with Jianfei Cao</p>
+          <div class="meta">
+            <span class="status">2026</span>
+            <button class="abs-toggle" type="button" aria-expanded="false">Abstract <span class="chev">▾</span></button>
+          </div>
+          <div class="abstract"><div>
+            <p>We derive deterministic conditions under which objective accuracy implies structural recovery in prototype clustering. For Euclidean <i>k</i>-means, we control the improvement obtained by reassigning observations away from a benchmark partition. A sufficiently small boundary belt yields profiled quadratic growth on a neighborhood that can contain incorrectly assigned candidates. An independent localization bound then converts a small objective gap into small prototype displacement and exact recovery after nearest-prototype assignment. A second route compares optimized partition costs directly. In a two-ball model, it gives error bounds for arbitrary near-optimal solutions without a displacement assumption, together with sufficient recovery thresholds whose dependence on imbalance is optimal in order. Squared loss and one-dimensional continuous linear loss require different separation scales, <i>c</i><sub><i>b</i></sub><sup>−1/2</sup> and <i>c</i><sub><i>b</i></sub><sup>−1</sup>, respectively, where <i>c</i><sub><i>b</i></sub> is the proportion of observations in the smallest benchmark cluster. A loss-increment condition number organizes these comparisons. Local margins describe recoverable cluster interiors, while a coarse conditional inequality supports extensions to heterogeneous and evolving objectives. We distinguish these benchmark-relative guarantees from empirical stability diagnostics.</p>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="paper">
+        <figure class="thumb placeholder" aria-hidden="true"><span>Figure</span></figure>
+        <div class="paper-body">
+          <h3 class="paper-title">Certifying the Near-Optimal Set of a Clustering</h3>
+          <div class="meta">
+            <span class="status">2026</span>
+            <button class="abs-toggle" type="button" aria-expanded="false">Abstract <span class="chev">▾</span></button>
+          </div>
+          <div class="abstract"><div>
+            <p>Clustering algorithms report a single partition, yet the objective often admits many near-optimal partitions with substantially different structure, and agreement among random restarts certifies nothing. We develop a theory of sound but incomplete certification for the near-optimal set of the two-cluster <i>k</i>-means objective. The central object is the structural barrier: the smallest objective value attainable at Hamming distance at least <i>m</i> from a reported partition. Comparing it with the incumbent value and a global lower bound yields a three-valued output (stable, ambiguous, or inconclusive) and separates three sources of uncertainty that are usually conflated: optimization gap, structural slack, and relaxation error. We show that the cost of every alternative partition is an explicit concave quadratic function of a single vector of moved residuals. Consequently, the exact barrier is attained at vertices of a moved-sum polytope and is computable in polynomial time in fixed dimension, although the decision problem is NP-complete in general. Closed-form coupled bounds give explicit radius certificates whose dependence on cluster imbalance is sharp up to a constant factor, and a forced-flip refinement certifies simultaneously valid pointwise cores. For statements about a latent partition, an exact profiled chi-square pivot transfers any intrinsic certificate into a finite-sample confidence statement. We quantify the calibration tax paid by absolute loss cutoffs, show that likelihood-ratio calibration removes it under strong separation, and prove posterior-overlap lower bounds that limit every honest radius and core.</p>
+          </div></div>
+        </div>
+      </article>
+
+      <article class="paper">
+        <figure class="thumb placeholder" aria-hidden="true"><span>Figure</span></figure>
+        <div class="paper-body">
+          <h3 class="paper-title">Spectral Clustering for Network Cluster-Robust Inference</h3>
+          <p class="authors">with Jianfei Cao</p>
+          <div class="meta">
+            <span class="status">2026</span>
+            <button class="abs-toggle" type="button" aria-expanded="false">Abstract <span class="chev">▾</span></button>
+          </div>
+          <div class="abstract"><div>
+            <p>[Abstract coming soon.]</p>
+          </div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="wip">
+      <h2 class="section-title" id="wip">Work in Progress <span class="count">2</span></h2>
+
+      <article class="paper">
+        <figure class="thumb placeholder" aria-hidden="true"><span>Figure</span></figure>
+        <div class="paper-body">
+          <h3 class="paper-title">Generalized Heterogeneity Mixture Model: Structured Heterogeneity Spectra</h3>
+          <div class="meta"><span class="status wip">In progress</span></div>
+        </div>
+      </article>
+
+      <article class="paper">
+        <figure class="thumb placeholder" aria-hidden="true"><span>Figure</span></figure>
+        <div class="paper-body">
+          <h3 class="paper-title">Moving Along or Moving the Curve? Identifying Shifts in Nonlinear Causal Relationships</h3>
+          <div class="meta"><span class="status wip">In progress</span></div>
+        </div>
+      </article>
+    </section>
+
+    <footer>© <span id="year">2026</span> Romano Li</footer>
+  </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
