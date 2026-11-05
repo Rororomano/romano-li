@@ -22,7 +22,7 @@ if (y) y.textContent = new Date().getFullYear();
     function open() {
       dlg.innerHTML = '';
       var wrap = document.createElement('div');
-      wrap.className = 'fig';
+      wrap.className = fig.classList.contains('wide') ? 'fig wide' : 'fig';
       wrap.appendChild(fig.querySelector('svg').cloneNode(true));
       dlg.appendChild(wrap);
       if (dlg.showModal) dlg.showModal();

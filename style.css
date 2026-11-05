@@ -167,6 +167,8 @@ main { min-width: 0; display: flex; flex-direction: column; gap: 64px; }
 .fig .amb .dot { fill: url(#cert-split); }
 .fig .amb .ring { fill: none; stroke: var(--ink); stroke-opacity: .55; stroke-width: 2.5; stroke-dasharray: 5 6; }
 .paper.no-thumb { grid-template-columns: minmax(0, 1fr); }
+.thumb.wide { aspect-ratio: 2 / 1; }
+.lightbox .fig.wide { aspect-ratio: 2 / 1; }
 .thumb.fig { cursor: zoom-in; transition: border-color .2s ease; }
 .thumb.fig:hover { border-color: var(--ink-soft); }
 .lightbox {
