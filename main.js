@@ -9,3 +9,25 @@ document.querySelectorAll('.paper').forEach(function (paper) {
 });
 var y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
+
+// Click a paper figure to see it full size.
+(function () {
+  var dlg = document.createElement('dialog');
+  dlg.className = 'lightbox';
+  document.body.appendChild(dlg);
+  dlg.addEventListener('click', function () { dlg.close(); });
+  document.querySelectorAll('.thumb.fig').forEach(function (fig) {
+    fig.tabIndex = 0;
+    fig.setAttribute('aria-label', 'Enlarge figure');
+    function open() {
+      dlg.innerHTML = '';
+      var wrap = document.createElement('div');
+      wrap.className = 'fig';
+      wrap.appendChild(fig.querySelector('svg').cloneNode(true));
+      dlg.appendChild(wrap);
+      if (dlg.showModal) dlg.showModal();
+    }
+    fig.addEventListener('click', open);
+    fig.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+})();
